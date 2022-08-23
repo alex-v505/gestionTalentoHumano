@@ -1,12 +1,13 @@
 <?php
-if(isset($_GET['codigo_capa']))
+if(isset($_GET['codigo_sed']))
 {
+
     include '../../model/conectar.php';
-    $id = $_GET['codigo_capa'];
-    $sql = "SELECT * FROM capacitacion 
-            WHERE capacitacion.codigo_capa = ".$id ;
+    $id = $_GET['codigo_sed'];
+    $sql = "SELECT * FROM sede
+    WHERE codigo_sed = ".$id;
     $result = $conn->query($sql);
-    
     include '../../model/desconectar.php';
+
 }
 ?>

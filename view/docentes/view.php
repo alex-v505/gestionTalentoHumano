@@ -1,35 +1,46 @@
 <?php  include '../template/header.php'?>
-<?php include '../../controller/peliculas/view.php' ?>
+<?php include '../../controller/docentes/view.php' ?>
 <section class="content">
     <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6 mt-5">
-            <p class="lead"><b>Informacion Pelicula</b></p>
-
-            <table class="table table-hover align-middle table-info">
+        <div class="col-12 text-center">
+            <p class="lead"><H3>Información del Docente</H3></p>
+        
+            <table class="table table-dark">
                 <?php
             $row = $result->fetch_assoc();
             ?>
                 <tbody>
                     <tr>
                         <th scope="row">ID</th>
-                        <td><?php echo $row['pel_id']?></td>
+                        <td><?php echo $row['codigo_doc']?></td>
                     </tr>
                     <tr>
-                        <th scope="row">Género</th>
-                        <td><?php  echo $row['gen_nombre']?></td>
+                        <th scope="row">ID Docente</th>
+                        <td><?php  echo $row['id_doc']?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cédula</th>
+                        <td><?php  echo $row['cedula_doc']?></td>
                     </tr>
                     <tr>
                         <th scope="row">Nombre</th>
-                        <td><?php  echo $row['pel_nombre']?></td>
+                        <td><?php  echo $row['nombre_doc']?></td>
                     </tr>
                     <tr>
-                        <th scope="row">Costo</th>
-                        <td><?php  echo $row['pel_costo']?></td>
+                        <th scope="row">Apellido</th>
+                        <td><?php  echo $row['apellido_doc']?></td>
                     </tr>
                     <tr>
-                        <th scope="row">Fecha de estreno</th>
-                        <td><?php  echo $row['pel_fecha_estreno']?></td>
+                        <th scope="row">Título</th>
+                        <td><?php  echo $row['titulo_doc']?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Carrera</th>
+                        <td><?php  echo $row['nombre_car']?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Capacitación</th>
+                        <td><?php  echo $row['nombre_capa']?></td>
                     </tr>
                 </tbody>
             </table>
