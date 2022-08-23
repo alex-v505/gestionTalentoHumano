@@ -1,9 +1,9 @@
 <?php  include '../template/header.php'?>
 <?php  include '../../controller/capacitacion/index.php' ?>
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8 mt-5">
-            <div class="card">
+        
+        <div class="col-12 px-5 mt-5 ">
+            
                 <div class="card-header">
                     <div class="row align-items-center">
                         <div class="col-4"><b>Capacitaciones registradas</b></div>
@@ -31,17 +31,20 @@
                                 echo'<td>'.$row["nombre_capa"].'</td>';
                                 echo'<td>'.$row["tipo_capa"].'</td>';
                                 echo'<td>'.$row["tiempo_capa"].'</td>';
-                                echo'
-                                <td><button><a href="update.php?codigo_capa='.$row["codigo_capa"].'"><i class="fa fa-pen text-success"></i></a></button> 
-                                <button><a href="view.php?codigo_capa='.$row["codigo_capa"].'"><i class="fa fa-eye text-primary"></i></a></button>';
-                                echo '</tr>';
+                                echo '<th scope="row">
+                                <a class="text-success" href="update.php?codigo_capa='.$row["codigo_capa"].'"><i class="fa-solid fa-pen"></i></a>
+                                <a href="view.php?codigo_capa='.$row["codigo_capa"].'"><i class="fa-solid fa-search"></i></a>
+                                <a class="text-danger" href="delete.php?codigo_capa='.$row["codigo_capa"].'"><i class="fa-solid fa-trash-can"></i></a>
+                                </th>';
                             }
                             } else {
                             echo "0 results";
                             }
                         ?>  
                 </table>
-            </div>
+            
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/94ae563b14.js" crossorigin="anonymous"></script>
 <?php  include '../template/footer.php'?>

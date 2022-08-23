@@ -255,13 +255,13 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../actor_peliculas/index.php" class="nav-link">
+                                    <a href="../departamento/index.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Departamento</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../socios/index.php" class="nav-link">
+                                    <a href="../carrera/index.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Carrera</p>
                                     </a>
