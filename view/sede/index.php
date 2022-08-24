@@ -3,13 +3,15 @@
 <div class="row">
     <div class="col-12 px-5 mt-5 ">
         
-            <div class="card-header">
-            <div class="row align-items-center">
-            <div class="col"><b>Sedes</b></div>
-                <div class="col-2"><a href="create.php"><button type="button" class="btn btn-success">Agregar</button></a></div>
-            </div>
-            </div>
-            <table class="table table-hover align-middle">
+        <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col-4"><h2>Sedes registradas</h2></div>
+                        <div class="col-6"></div>
+                        <div class="col-2"><a href="create.php"><button type="button" class="btn btn-success">Agregar</button></a></div>
+                    </div>
+                </div>
+                <br>
+            <table class="table table-dark table-sm">
                 <thead>
                     <tr>
                         <th scope="col">Código</th>
