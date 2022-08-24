@@ -1,18 +1,18 @@
 <?php
-    if(isset($_POST['id_capa']))
-    {
-        include '../../model/conectar.php';
-        $codigo_capa = 0;
-        $id_capa = $_POST['id_capa'];
-        $nombre_capa = $_POST['nombre_capa'];
-        $tipo_capa = $_POST['tipo_capa'];
-        $tiempo_capa = $_POST['tiempo_capa'];
-        $fecha_inicio_capa = $_POST['fecha_inicio_capa'];
-        $fecha_fin_capa = $_POST['fecha_fin_capa'];
-        $sql = "INSERT INTO capacitacion(codigo_capa, id_capa, nombre_capa, tipo_capa, tiempo_capa, fecha_inicio_capa, fecha_fin_capa)
-                VALUE (0,'".$id_capa."','".$nombre_capa."','".$tipo_capa."','".$tiempo_capa."','".$fecha_inicio_capa."','".$fecha_fin_capa."')";
-        $result = $conn->query($sql);
-        include '../../model/desconectar.php';
-        header('location: ../../view/capacitaciones/index.php');
-    }
+    include '../../model/conectar.php';
+    $sql = "SELECT * FROM docentes ORDER BY nombre_doc;";
+    $result_doc = $conn->query($sql);
+    include '../../model/desconectar.php';
+
+   if(isset($_POST['codigo_doc']))
+   {
+       include '../../model/conectar.php';
+       $codigo_dc = 0;
+       $codigo_doc = $_POST['codigo_doc'];
+       $sql = "INSERT INTO docentes_capacitados(codigo_dc, codigo_doc)
+               VALUES (0,'".$codigo_doc."')";
+       $result = $conn->query($sql);
+       include '../../model/desconectar.php';
+       header('location: ../../view/docentes_capacitados/index.php');
+   }
 ?>
