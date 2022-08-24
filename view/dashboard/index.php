@@ -49,8 +49,12 @@
         </div>
 
     </div>
-
-
+    <br><br><br><br>
+    <center>
+    <div class="cotainer">
+        <img src="../dist/img/ESPEtransparente.png" height="200" width="800">
+    </div>
+    </center>
 </section>
 
 <?php include '../template/footer.php' ?>
