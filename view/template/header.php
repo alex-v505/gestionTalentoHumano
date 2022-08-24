@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../template/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="../template/plugins/summernote/summernote-bs4.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

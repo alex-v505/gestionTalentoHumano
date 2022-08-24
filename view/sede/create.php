@@ -7,21 +7,21 @@
             <H3>Registrar Sede</H3>
             <form class="row g-3 needs-validation" action='../../controller/sede/create.php' method="POST" novalidate>
                 <div class="col-md-12">
-                    <label for="soc_nombre" class="form-label">Nombre de sede</label>
+                    <label for="nombre_sed" class="form-label">Nombre de sede</label>
                     <input type="text" class="form-control" id="nombre_sed" name="nombre_sed" required>
                     <div class="invalid-feedback">
                         Escriba un nombre de la sede.
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <label for="soc_direccion" class="form-label">Provincia de sede</label>
+                    <label for="provincia_sed" class="form-label">Provincia de sede</label>
                     <input type="text" class="form-control" id="provincia_sed" name="provincia_sed" required>
                     <div class="invalid-feedback">
                         Escriba una provincia.
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <label for="soc_telefono" class="form-label">Ciudad de la sede</label>
+                    <label for="ciudad_sed" class="form-label">Ciudad de la sede</label>
                     <input type="text" class="form-control" id="ciudad_sed" name="ciudad_sed" required>
                     <div class="invalid-feedback">
                         Escriba una ciudad.
@@ -38,7 +38,6 @@
 <script>
 (function() {
     'use strict'
-
 
     var forms = document.querySelectorAll('.needs-validation')
 
