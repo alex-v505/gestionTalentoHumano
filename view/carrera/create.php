@@ -1,38 +1,42 @@
 <?php include '../template/header.php' ?>
-<?php include '../../controller/peliculas/create.php'?>
+<?php include '../../controller/carrera/create.php'?>
 <div class="row">
     <div class="col-3"></div>
     <div class="col-6 mt-5">
         <div class="card">
             <div class="card-header">
-                <b>Registrar Pelicula</b>
+                <b>Registrar Carrera</b>
             </div>
         </div>
-        <form action='../../controller/peliculas/create.php' method="POST" novalidate>
-            <div class="mb-3 mt-3">
-                <label class="form-label">Género</label>
-                <select name="gen_id" id="gen_id">
-                    <?php
+        <form action='../../controller/carrera/create.php' method="POST" novalidate>
+
+            <div class="mb-3">
+                <label class="form-label">ID</label>
+                <input type="text" class="form-control" id="id_car" name="id_car" required>
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre_car" name="nombre_car" required>
+                <div class="mb-3 mt-3">
+                    <label class="form-label">Seleccione la sede</label>
+                    <select name="id_dep" id="id_dep">
+                        <?php
                         while($row = $result->fecth_assoc())
                         {
-                            echo '<option value="'.$row['gen_id'].'">'.$row['gen_nombre'].'</option>';
+                            echo '<option value="'.$row['id_dep'].'">'.$row['nombre_sed'].'</option>';
                         }
                     ?>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="pel_nombre" name="pel_nombre" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Costo</label>
-                <input type="number" class="form-control" id="pel_costo" name="pel_costo" required>
-            </div>
-            <div class="mb-3">
-                <label for="telefonoSocio" class="form-label">Fechas Estreno</label>
-                <input type="date" class="form-control" id="pel_fecha_estreno" name="pel_fecha_estreno" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Agregar</button>
+                    </select>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label">Seleccione el departamento</label>
+                    <select name="id_dep" id="id_dep">
+                        <?php
+                        while($row = $result->fecth_assoc())
+                        {
+                            echo '<option value="'.$row['id_dep'].'">'.$row['nombre_dep'].'</option>';
+                        }
+                    ?>
+                    </select>
+                </div>
         </form>
     </div>
 </div>

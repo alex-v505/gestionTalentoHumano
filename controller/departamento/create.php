@@ -1,18 +1,14 @@
 <?php
-    if(isset($_POST['id_capa']))
+    if(isset($_POST['id_dep']))
     {
         include '../../model/conectar.php';
-        $codigo_capa = 0;
-        $id_capa = $_POST['id_capa'];
-        $nombre_capa = $_POST['nombre_capa'];
-        $tipo_capa = $_POST['tipo_capa'];
-        $tiempo_capa = $_POST['tiempo_capa'];
-        $fecha_inicio_capa = $_POST['fecha_inicio_capa'];
-        $fecha_fin_capa = $_POST['fecha_fin_capa'];
-        $sql = "INSERT INTO capacitacion(codigo_capa, id_capa, nombre_capa, tipo_capa, tiempo_capa, fecha_inicio_capa, fecha_fin_capa)
-                VALUE (0,'".$id_capa."','".$nombre_capa."','".$tipo_capa."','".$tiempo_capa."','".$fecha_inicio_capa."','".$fecha_fin_capa."')";
+        $codigo_dep = 0;
+        $id_dep = $_POST['id_dep'];
+        $nombre_dep = $_POST['nombre_dep'];
+        $sql = "INSERT INTO departamento(codigo_dep, id_dep, nombre_dep)
+                VALUE (0,'".$id_dep."','".$nombre_dep."')";
         $result = $conn->query($sql);
         include '../../model/desconectar.php';
-        header('location: ../../view/capacitaciones/index.php');
+        header('location: ../../view/departamento/index.php');
     }
 ?>

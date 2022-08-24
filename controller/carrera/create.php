@@ -1,18 +1,26 @@
 <?php
-    if(isset($_POST['id_capa']))
+    include '../../model/conectar.php';
+    $sql = "SELECT * FROM sede ORDER BY nombre_sed;";
+    $nombre_sed = $conn->query($sql);
+    include '../../model/desconectar.php';
+
+    include '../../model/conectar.php';
+    $sql = "SELECT * FROM departamento ORDER BY nombre_dep;";
+    $nombre_dep = $conn->query($sql);
+    include '../../model/desconectar.php';
+    
+    if(isset($_POST['id_car']))
     {
         include '../../model/conectar.php';
-        $codigo_capa = 0;
-        $id_capa = $_POST['id_capa'];
-        $nombre_capa = $_POST['nombre_capa'];
-        $tipo_capa = $_POST['tipo_capa'];
-        $tiempo_capa = $_POST['tiempo_capa'];
-        $fecha_inicio_capa = $_POST['fecha_inicio_capa'];
-        $fecha_fin_capa = $_POST['fecha_fin_capa'];
-        $sql = "INSERT INTO capacitacion(codigo_capa, id_capa, nombre_capa, tipo_capa, tiempo_capa, fecha_inicio_capa, fecha_fin_capa)
-                VALUE (0,'".$id_capa."','".$nombre_capa."','".$tipo_capa."','".$tiempo_capa."','".$fecha_inicio_capa."','".$fecha_fin_capa."')";
+        $codigo_car = 0;
+        $id_car = $_POST['id_car'];
+        $nombre_car = $_POST['nombre_car'];
+        $codigo_sed = $_POST['codigo_sed'];
+        $codigo_dep = $_POST['codigo_dep'];
+        $sql = "INSERT INTO carrera(codigo_car, id_car, nombre_car, codigo_sed, codigo_dep)
+                VALUE (0,'".$id_car."','".$nombre_car."','".$codigo_sed."','".$codigo_dep."')";
         $result = $conn->query($sql);
         include '../../model/desconectar.php';
-        header('location: ../../view/capacitaciones/index.php');
+        header('location: ../../view/carrera/index.php');
     }
 ?>

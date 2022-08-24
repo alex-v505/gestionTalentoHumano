@@ -14,7 +14,7 @@
             <div class="mb-3 mt-3">
                 <label for="id_capa" class="form-label">ID</label>
                 <input type="text" class="form-control" id="id_capa" name="id_capa" aria-describedby="emailHelp" required>
-                <div id="emailHelp" class="form-text">No compartiremos sus datos personales con nadie.</div>
+                <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="mb-3">
                 <label for="nombre_capa" class="form-label">Nombre</label>
