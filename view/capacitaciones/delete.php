@@ -45,7 +45,7 @@
 
 
         <form action="../../controller/capacitacion/delete.php" method="post">
-            <input type="hidden" name="codigo_capa value=" <?php echo $row['codigo_capa'];?>>
+            <input type="hidden" name="codigo_capa" value=" <?php echo $row['codigo_capa'];?>">
             <input type="submit" value="Eliminar" class="btn btn-danger">
         </form>
 </section>

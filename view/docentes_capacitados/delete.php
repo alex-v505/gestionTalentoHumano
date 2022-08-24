@@ -20,7 +20,7 @@
                         <th scope="row">ID</th>
                         <td><?php echo $row['codigo_dc'];?></td>
                     </tr>
-                   
+                
                     <tr>
                         <th scope="row">Nombre</th>
                         <td><?php echo $row['nombre_doc'];?></td>
@@ -32,7 +32,7 @@
         </div>
         
         <form action="../../controller/docentes_capacitados/delete.php" method="post">
-            <input type="hidden" name="codigo_dc value="<?php echo $row['codigo_dc'];?>>
+            <input type="hidden" name="codigo_dc" value="<?php echo $row['codigo_dc'];?>">
             <input type="submit" value="Eliminar" class="btn btn-danger">
         </form>
 </section>

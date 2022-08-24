@@ -50,7 +50,7 @@
         </div>
     </div>
         <form action="../../controller/docentes/delete.php" method="post">
-            <input type="hidden" name="codigo_doc value=" <?php echo $row['codigo_doc'];?>>
+            <input type="hidden" name="codigo_doc" value=" <?php echo $row['codigo_doc'];?>">
             <input type="submit" value="Eliminar" class="btn btn-danger">
         </form>
 </section>
