@@ -59,7 +59,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-success elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="index.php" class="brand-link">
                 <img src="../template/dist/img/logo constelasoft.png"
                     alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 100;">
                 <span class="brand-text font-weight-light">Constelasoft</span>
