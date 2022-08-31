@@ -52,7 +52,7 @@
     <br><br><br><br>
     <center>
     <div class="cotainer">
-        <img src="../dist/img/ESPEtransparente.png" height="200" width="800">
+        <img src="../dist/img/Constelasoft.png" height="150" width="500">
     </div>
     </center>
 </section>
